@@ -20,6 +20,7 @@
 		17B5C7C1B9F78E16B62B97C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B5C2A21CD69AE2932357FA /* Foundation.framework */; };
 		17B5C82EFE5FAA05ADE591B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C76B02641CFFF5D97D05 /* AppDelegate.m */; };
 		17B5C86F67B9BC43E512A528 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17B5CFC09C40EE7AD318FC20 /* Images.xcassets */; };
+		17B5C8A25F38B49DC5B4201B /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 17B5C889A3183A89783013A5 /* readme.md */; };
 		17B5C91B5455CD39ECFADB38 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17B5C1F97B6F0B886EFC2539 /* InfoPlist.strings */; };
 		17B5CAEB6F97D3AF889C3FC6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B5CF2313EE6F00EFF27D74 /* CoreGraphics.framework */; };
 		17B5CBAEE3B3BCFE43AB2A1E /* 150x150.png in Resources */ = {isa = PBXBuildFile; fileRef = 17B5C151BF7EBA258874CC76 /* 150x150.png */; };
@@ -49,6 +50,7 @@
 		17B5C69AA73E330B4C048400 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		17B5C7170A9B7805E62B5EF0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		17B5C76B02641CFFF5D97D05 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		17B5C889A3183A89783013A5 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = readme.md; sourceTree = "<group>"; };
 		17B5CA0DF2D4A527C634B87A /* BlobURLOfUIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlobURLOfUIImage.h; sourceTree = "<group>"; };
 		17B5CB7E791AC4357C7A71B8 /* BlobURLOfUIImageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlobURLOfUIImageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B5CC2B75F28B8A35A996F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				17B5CED9A0FA4F9D80A7015C /* BlobURLOfUIImage */,
 				17B5C849ED4D3A84168F7166 /* BlobURLOfUIImageTests */,
 				17B5C45CF22EE8950193C4E6 /* Lib */,
+				17B5C889A3183A89783013A5 /* readme.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -216,6 +219,11 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = azu;
+				TargetAttributes = {
+					17B5C45FBA05688502056245 = {
+						TestTargetID = 17B5C119F26022A499A02405;
+					};
+				};
 			};
 			buildConfigurationList = 17B5CB236DD041522039D896 /* Build configuration list for PBXProject "BlobURLOfUIImage" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -253,6 +261,7 @@
 				17B5C49058BFEFF70E577C4D /* Main.storyboard in Resources */,
 				17B5CBAEE3B3BCFE43AB2A1E /* 150x150.png in Resources */,
 				17B5CCBAAB1009872CE37815 /* index.html in Resources */,
+				17B5C8A25F38B49DC5B4201B /* readme.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +328,7 @@
 		17B5C135B62BB79411DC5BE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BlobURLOfUIImage.app/BlobURLOfUIImage";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -327,6 +337,7 @@
 				GCC_PREFIX_HEADER = "BlobURLOfUIImage/BlobURLOfUIImage-Prefix.pch";
 				INFOPLIST_FILE = "BlobURLOfUIImageTests/BlobURLOfUIImageTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -366,6 +377,7 @@
 		17B5C1ECED6E8F4C24EBE387 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BlobURLOfUIImage.app/BlobURLOfUIImage";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -374,6 +386,7 @@
 				GCC_PREFIX_HEADER = "BlobURLOfUIImage/BlobURLOfUIImage-Prefix.pch";
 				INFOPLIST_FILE = "BlobURLOfUIImageTests/BlobURLOfUIImageTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
