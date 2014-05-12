@@ -16,6 +16,17 @@ NSURL *imageBlobURL = [blobURLOfUIImage createUrlForUIImage:[UIImage imageNamed:
 // => image url file:///...
 ```
 
+### API
+
+``` objc
+- (NSURL *)createUrlForUIImage:(UIImage *) image;
+
+- (NSURL *)temporaryDirectoryURL;
+
+// remove all temporary images form /tmp
+- (void)cleanupTemporary;
+```
+
 ### Use case
 
 Run example.
