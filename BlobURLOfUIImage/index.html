@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        table, td, th {
+            border: 1px solid #595959;
+            border-collapse: collapse;
+        }
+
+        html, body, .main-wrapper {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main-wrapper {
+            padding: 15px;
+
+            max-height: 100%;
+            max-width: 100%;
+
+        }
+
+        .main-table {
+            width: 100%;
+            height: 100%;
+            table-layout: fixed;
+        }
+
+        td, th {
+            padding: 3px;
+            width: auto;
+            height: auto;
+
+        }
+
+        th {
+            background: #f0e6cc;
+
+            max-height: 100%;
+            max-width: 100%;
+        }
+
+        .graph-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="main-wrapper">
+    <table class="main-table">
+        <tr>
+            <td><img class="graph-image" src="{{img}}"/></td>
+            <td><img class="graph-image" src="{{img}}"/></td>
+        </tr>
+        <tr>
+            <td><img class="graph-image" src="{{img}}"/></td>
+            <td><img class="graph-image" src="{{img}}"/></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
